@@ -1,0 +1,35 @@
+html{
+  height: 100%;
+}
+body {
+  height: 100%;
+  padding: 50px;
+  background-color: darkblue;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+#scoreArea{
+  overflow-y: scroll;
+  height: 25%;
+  background-color: aquamarine;
+  border-radius: 20px;
+
+}
+#gameArea{
+  background-color: lightcyan;
+  height: 75%;
+  width: 100%;
+  border-radius: 20px;
+}
+
+a {
+  color: #00B7FF;
+}
+td{
+
+  text-align: center;
+  width: 100px;
+  vertical-align: middle;
+}
+select{
+
+}

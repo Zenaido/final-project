@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title><%= title %></title>
+    <script type="text/javascript" src="/javascripts/game.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+<body>
+<center>
+    <a href="/rankings" ><h1 style="color: azure"><%= title %></h1></a>
+</center>
+<div id="scoreArea" style="height: auto">
+    <center>
+        <table>
+            <tr><td>Rank</td><td>User</td> <td>Score</td>
+            </tr><% var rank = 0%>
+            <% gdata.forEach(function(gdata){  %>
+            <tr><td><%=rank%></td><td><%=gdata.username%> </td><td><%=gdata.score%></td></tr>
+            <% rank +=1;%>
+            <%});%>
+        </table>
+    </center>
+</div>
+</body>
+</html>

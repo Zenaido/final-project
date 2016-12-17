@@ -1,11 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <center>
+      <a href="/rankings" ><h1 style="color: azure"><%= title %></h1></a>
+    </center>
+    <div id="scoreArea">
+      <center>
+        <table>
+          <tr><td>User</td> <td>Score</td>
+          </tr>
+          <% gdata.forEach(function(gdata){  %>
+        <tr><td><%=gdata.username%> </td><td><%=gdata.score%></td></tr>
+
+          <%});%>
+        </table>
+      </center>
+    </div>
+    <div id="gameArea">
+      <form method="get" action="/g">
+        <br>
+
+
+
+      <p><center><img src="images/chest.svg" style="height: auto; width: 200px;">
+        <br>
+        <div id="description">
+          The goal of this game is to unlock as many chests as possible. You will choose how
+          difficult you want the chests to be. Chests will need 1-5 numbers to be unlocked.
+          On chests with one number you get 5 attempts. chests with two numbers you get 4 attempts and
+          on the remaining chests you get 3 attempts.
+          After each attempt the background color of the locks might change colors. If it does red means wrong color.
+          Blue means right number and there's another locks that uses this number too and Yellow means wrong number but
+          one or more locks use this number. Purple means that this lock is solved and no other lock use this number.
+        </div>
+
+        <input type="text" placeholder="Username" name="user"><br>
+          <input type="submit"   value="Lets Play"></center>
+
+        </center>
+        </form>
+    </div>
+
+      </p>
+
+    </div>
+
+
+
   </body>
 </html>
