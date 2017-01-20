@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var pgp = require('pg-promise')();
 var db = pgp('postgres://LuisZenaidoHernandez@localhost:5432/gamedata');
 
-
+// this is a comment
 var index = require('./routes/index');
 var users = require('./routes/users');
 var rankings = require('./routes/rankings');
